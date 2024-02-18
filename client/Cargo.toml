@@ -1,0 +1,38 @@
+[package]
+name = "aleo-maci-cli"
+version = "0.1.0"
+edition = "2021"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dev-dependencies]
+rusty-hook = "^0.11.2"
+
+[dependencies.uuid]
+features = ["v4", "serde"]
+version = "0.8"
+
+[dependencies]
+clap = { version = "3.1.6", features = ["derive"] }
+hex = "0.4.3"
+reqwest = { version = "0.11.10", features = ["blocking", "json"] }
+num = "0.1.36"
+
+[dependencies.aleo-maci-libs]
+path = "../libs"
+
+[dependencies.snarkvm]
+#path = "../snarkVM"
+git = "https://github.com/AleoHQ/snarkVM" 
+tag = "v0.8.0"
+features = ["utilities"]
+
+[dependencies.serde]
+features = ["derive"]
+version = "1.0"
+
+[dependencies.serde_json]
+version = "1.0"
+
+[dependencies.thiserror]
+version = "1.0"
+

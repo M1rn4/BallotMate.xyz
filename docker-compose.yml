@@ -1,0 +1,35 @@
+services:
+  dashboard:
+    build:
+      context: dashboard
+      args:
+        SERVER_URL: http://127.0.0.1:3000
+    ports:
+      - 4000:4000
+    depends_on:
+      - server
+
+  client:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+      args:
+        HOST: docker
+        REDIS_URL: redis://redis:6379
+        ADMIN_TOKEN: Tg5F3FpZFGhr
+    ports:
+      - 3000:3000
+    depends_on:
+      - redis
+      
+  redis:
+    image: redis:6.2-alpine
+    ports:
+      - 6379:6379

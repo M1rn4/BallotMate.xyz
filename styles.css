@@ -1,0 +1,93 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Fondo de pantalla */
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+	padding: 20px;
+    background-color: #d369ce; /* Fondo semitransparente */
+    color: #d369ce;
+    padding-right: 30px;
+    text-align: center;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra del menú */
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	position: fixed;
+	width: 100%;
+	z-index: 100
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	padding-right: 3%;
+	display: flex;
+	justify-content: flex-end; /* Alinear a la derecha */
+	align-items: center; /* Centrar verticalmente */
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a8a38a; /* Color de texto al pasar el ratón */
+}
+
+.content {
+    color: #d369ce;
+    text-align: center;
+    padding: 50px;
+    height: 100%;
+}
+
+.title {
+	padding-top: 20%;
+    font-size: 5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+.welcome {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ffd700; /* Color destacado */
+}
+
+.image {
+    max-width: 80%;
+    height: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Sombra de la imagen */
+    transition: transform 0.3s; /* Efecto de transición al pasar el ratón */
+}
+
+.image:hover {
+    transform: scale(1.1); /* Escalar la imagen al pasar el ratón */
+}
